@@ -1,0 +1,542 @@
+/* ========================================
+   Global Styles & Variables
+   ======================================== */
+
+:root {
+    /* ECCOX Brand Colors */
+    --primary-color: #1a9cb0;
+    --primary-dark: #157a8a;
+    --primary-light: #4db8c7;
+    
+    /* Neutral Colors */
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    
+    /* Semantic Colors */
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    
+    /* Spacing */
+    --container-max-width: 1280px;
+    --spacing-unit: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--gray-800);
+    background-color: var(--gray-50);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ========================================
+   Header
+   ======================================== */
+
+.header {
+    background: var(--gray-900);
+    color: white;
+    padding: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(26, 156, 176, 0.2);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 40px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 0;
+}
+
+.logo {
+    height: 56px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-text {
+    border-left: 2px solid rgba(255, 255, 255, 0.15);
+    padding-left: 20px;
+}
+
+.logo-text h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.logo-text p {
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.7;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--primary-light);
+}
+
+/* Header Navigation & Stats */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-stats {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stat-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-light);
+    flex-shrink: 0;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.3px;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ========================================
+   Hero Section
+   ======================================== */
+
+.hero {
+    background: white;
+    padding: 64px 0 48px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: var(--gray-600);
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* ========================================
+   Gallery Section
+   ======================================== */
+
+.gallery {
+    padding: 64px 0 96px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 32px;
+}
+
+/* ========================================
+   Dashboard Cards
+   ======================================== */
+
+.dashboard-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.card-image {
+    position: relative;
+    height: 220px;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><path d="M10 10h40v40H10z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></svg>');
+    background-size: 60px 60px;
+}
+
+.card-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-md);
+    z-index: 3;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 156, 176, 0.20);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.dashboard-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.btn-view {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.2s ease;
+}
+
+.btn-view:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
+}
+
+.card-content {
+    padding: 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+}
+
+.card-description {
+    font-size: 15px;
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    flex: 1;
+}
+
+.card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--gray-500);
+}
+
+.meta-item .icon {
+    width: 16px;
+    height: 16px;
+    color: var(--primary-color);
+}
+
+/* Card Preview Image */
+.preview-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Guide Link */
+.guide-link {
+    color: var(--gray-500);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.guide-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Placeholder Cards */
+.card-placeholder {
+    opacity: 0.6;
+}
+
+.placeholder-image {
+    background: linear-gradient(135deg, var(--gray-300) 0%, var(--gray-400) 100%);
+}
+
+.card-placeholder .card-badge {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--gray-600);
+}
+
+.card-placeholder:hover {
+    transform: none;
+    cursor: default;
+}
+
+.card-placeholder .card-overlay {
+    display: none;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+.footer {
+    background: var(--gray-900);
+    color: var(--gray-400);
+    padding: 32px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.footer-note {
+    font-size: 13px;
+    color: var(--gray-500);
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .nav-stats {
+        padding: 10px 16px;
+        gap: 16px;
+    }
+    
+    .stat-label {
+        font-size: 10px;
+    }
+    
+    .stat-value {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .garo {
+        padding: 40px 0 32px;
+    }
+    
+    .gallery {
+        padding: 40px 0 64px;
+    }
+    
+    .card-content {
+        padding: 20px;
+    }
+    
+    .stat-content {
+        display: none;
+    }
+    
+    .stat-item {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .stat-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .nav-stats {
+        gap: 12px;
+        padding: 8px 12px;
+    }
+    
+    .stat-divider {
+        height: 24
+    }
+    
+    .logo-text {
+        padding-left: 12px;
+    }
+    
+    .logo-text h1 {
+        font-size: 20px;
+    }
+    
+    .logo {
+        height: 44px;
+    }
+    
+    .nav-stats {
+        width: 100%;
+        justify-content: space-between;
+        padding: 12px 16px;
+    }
+    
+    .stat-item {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 16px 0;
+    }
+    
+    .hero {
+        padding: 40px 0 32px;
+    }
+    
+    .gallery {
+        padding: 40px 0 64px;
+    }
+    
+    .card-content {
+        padding: 20px;
+    }
+}

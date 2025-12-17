@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DASHBI ECCOX VISION - Dashboard de Migração de Artefatos">
+    <title>DASHBI ECCOX VISION | ECCOX Dashboards</title>
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="dashboard-header">
+        <div class="header-container">
+            <a href="../index.html" class="btn-back">
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                <span>Voltar à Galeria</span>
+            </a>
+            <div class="header-title">
+                <h1>DASHBI ECCOX VISION</h1>
+                <span class="header-subtitle">Migração de Artefatos</span>
+            </div>
+            <div class="header-actions">
+                <button class="btn-fullscreen" onclick="toggleFullscreen()" title="Tela Cheia">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Container -->
+    <main class="dashboard-container">
+        <div class="dashboard-wrapper">
+            <iframe 
+                id="powerbiFrame"
+                title="DASHBI-ECCOX-VISION" 
+                width="100%" 
+                height="100%" 
+                src="https://app.powerbi.com/reportEmbed?reportId=c04ddcda-da0c-4f96-b4ba-da31e63247c9&autoAuth=true&ctid=53375b1f-f7ee-4241-bec6-0606e553e414&filterPaneEnabled=false&navContentPaneEnabled=false" 
+                frameborder="0" 
+                allowFullScreen="true"
+                class="dashboard-iframe">
+            </iframe>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner"></div>
+            <p>Aguardando autenticação...</p>
+            <p class="loading-info">Você será solicitado a fazer login com suas credenciais ECCOX</p>
+        </div>
+
+        <!-- Auth Instructions Overlay -->
+        <div class="auth-overlay" id="authOverlay" style="display: none;">
+            <div class="auth-card">
+                <svg class="auth-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+                <h3>Autenticação Necessária</h3>
+                <p>Para visualizar este dashboard, você precisa estar autenticado com uma conta Microsoft da ECCOX.</p>
+                <button class="btn-auth" onclick="reloadDashboard()">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                    </svg>
+                    Tentar Novamente
+                </button>
+                <p class="auth-note">Se continuar com problemas, entre em contato com o suporte de TI</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
