@@ -11,28 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Header -->
-    <header class="dashboard-header">
-        <div class="header-container">
-            <a href="../index.html" class="btn-back">
-                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                </svg>
-                <span>Voltar à Galeria</span>
-            </a>
-            <div class="header-title">
-                <h1>DASHBI ECCOX VISION</h1>
-                <span class="header-subtitle">Migração de Artefatos</span>
-            </div>
-            <div class="header-actions">
-                <button class="btn-fullscreen" onclick="toggleFullscreen()" title="Tela Cheia">
-                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </header>
+    <!-- Floating Buttons -->
+    <a href="../index.html" class="floating-back" title="Voltar à Galeria">
+        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+    </a>
+    <button class="floating-fullscreen" onclick="toggleFullscreen()" title="Tela Cheia">
+        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+        </svg>
+    </button>
 
     <!-- Dashboard Container -->
     <main class="dashboard-container">
